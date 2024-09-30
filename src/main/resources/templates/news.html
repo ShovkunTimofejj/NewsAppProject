@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>News List</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<h1>News List</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Headline</th>
+        <th>Description</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="news : ${newsList}">
+        <td th:text="${news.headline}">Headline</td>
+        <td th:text="${news.description}">Description</td>
+        <td>
+            <a th:href="@{/news/edit/{id}(id=${news.id})}">Edit</a> |
+            <form th:action="@{/news/delete/{id}(id=${news.id})}" method="post" style="display:inline;">
+                <button type="submit">Delete</button>
+            </form>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<a href="/news/add">Add New News</a>
+</body>
+</html>
