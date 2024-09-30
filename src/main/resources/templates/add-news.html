@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add News</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<h1>Add News</h1>
+<form action="/news/add" method="post" th:object="${news}">
+    <label for="headline">Headline:</label>
+    <input type="text" id="headline" th:field="*{headline}" required>
+    <br>
+    <label for="description">Description:</label>
+    <textarea id="description" th:field="*{description}" required></textarea>
+    <br>
+    <button type="submit">Save News</button>
+</form>
+<a href="/news">Back to News List</a>
+</body>
+</html>

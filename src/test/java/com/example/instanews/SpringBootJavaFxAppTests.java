@@ -1,10 +1,10 @@
-package com.example.newsparser;
+package com.example.instanews;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class NewsParserApplicationTests {
+class SpringBootJavaFxAppTests {
 
     @Test
     void contextLoads() {

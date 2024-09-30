@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" spacing="15" alignment="CENTER" stylesheets="@styles.css" padding="20">
+
+    <!-- Select time period -->
+    <ComboBox fx:id="timePeriodComboBox" promptText="Select Time Period" maxWidth="200" tooltip="Choose a time period to filter news"/>
+
+    <!-- News headline -->
+    <Label fx:id="headlineLabel" text="Headline" style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-alignment: center;" wrapText="true" maxWidth="300"/>
+
+    <!-- News description -->
+    <Label fx:id="descriptionLabel" text="Description" style="-fx-font-size: 16px;" wrapText="true" maxWidth="300"/>
+
+    <!-- Input fields for news -->
+    <TextField fx:id="headlineField" promptText="Enter headline"/>
+    <TextField fx:id="descriptionField" promptText="Enter description"/>
+
+    <!-- Control buttons -->
+    <HBox spacing="20" alignment="CENTER">
+        <Button fx:id="previousButton" text="Previous" prefWidth="100" style="-fx-font-size: 14px;" tooltip="Go to the previous news"/>
+        <Button fx:id="nextButton" text="Next" prefWidth="100" style="-fx-font-size: 14px;" tooltip="Go to the next news"/>
+    </HBox>
+
+    <!-- CRUD Buttons -->
+    <HBox spacing="20" alignment="CENTER">
+        <Button fx:id="addButton" text="Add News" prefWidth="100" style="-fx-font-size: 14px;" tooltip="Add a new news"/>
+        <Button fx:id="editButton" text="Edit News" prefWidth="100" style="-fx-font-size: 14px;" tooltip="Edit the current news"/>
+        <Button fx:id="deleteButton" text="Delete News" prefWidth="100" style="-fx-font-size: 14px;" tooltip="Delete the current news"/>
+    </HBox>
+</VBox>
